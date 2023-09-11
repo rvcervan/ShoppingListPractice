@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ShoppingList';
+  shopping: boolean = false;
+  recipe: boolean = true;
+
+  onSelect(feature: string){
+    if(feature === 'recipe'){
+      this.recipe = true;
+      this.shopping = false;
+    }
+    else if(feature === 's_list'){
+      this.shopping = true;
+      this.recipe = false;
+    }
+    else{
+      this.recipe = true;
+      this.shopping = true;
+    }
+  }
+
 }
